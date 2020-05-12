@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function shopingcart() {
+	const CartFooter=
+        <nav className="navbar navbar-dark bg-dark">
+           <a className="navbar-brand" href="#">&copy;</a>
+        </nav>;
+
+        const CartHeader=
+        <nav className="navbar navbar-dark bg-primary">
+            <a className="navbar-brand" href="#">Shoping Cart</a>
+        </nav>;
+
+        const CartItems=
+                <div className="container">
+                    <h1>Cart Items</h1>
+                </div>;
+ return  <div>
+	  {CartHeader}
+	  {CartItems}
+	  {CartFooter}
+	</div>
 }
-
-export default App;
+export default shopingcart;
