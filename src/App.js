@@ -9,10 +9,9 @@ class App extends React.Component {
         { id: 2, product: { id: 41, name: 'Heavy Duty Concrete Plate', priceInCents: 499 }, quantity: 2 },
         { id: 3, product: { id: 42, name: 'Intelligent Paper Knife', priceInCents: 1999 }, quantity: 1 },
       ]
-  
  return (      
     <div>
-	  <Shopingcart/>
+	  <Shopingcart Itemlist={cartItemsList}/>
 	</div>);
  }
 }
