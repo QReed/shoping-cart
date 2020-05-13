@@ -1,24 +1,21 @@
 import React from 'react';
+import Shopingcart from './Shopingcart';
 
-function shopingcart() {
-	const CartFooter=
-        <nav className="navbar navbar-dark bg-dark">
-           <a className="navbar-brand" href="#">&copy;</a>
-        </nav>;
+class App extends React.Component {
 
-        const CartHeader=
-        <nav className="navbar navbar-dark bg-primary">
-            <a className="navbar-brand" href="#">Shoping Cart</a>
-        </nav>;
-
-        const CartItems=
-                <div className="container">
-                    <h1>Cart Items</h1>
-                </div>;
- return  <div>
-	  {CartHeader}
-	  {CartItems}
-	  {CartFooter}
-	</div>
+ render() {   
+    var cartItemsList = [
+        { id: 1, product: { id: 40, name: 'Mediocre Iron Watch', priceInCents: 399 }, quantity: 1 },
+        { id: 2, product: { id: 41, name: 'Heavy Duty Concrete Plate', priceInCents: 499 }, quantity: 2 },
+        { id: 3, product: { id: 42, name: 'Intelligent Paper Knife', priceInCents: 1999 }, quantity: 1 },
+      ]
+  
+ return (      
+    <div>
+	  <Shopingcart/>
+	</div>);
+ }
 }
-export default shopingcart;
+export default App;
+
+
