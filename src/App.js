@@ -1,5 +1,6 @@
 import React from 'react';
 import Shopingcart from './Shopingcart';
+import Additem from './Additem';
 
 class App extends React.Component {
 
@@ -12,6 +13,7 @@ class App extends React.Component {
  return (      
     <div>
 	  <Shopingcart Itemlist={cartItemsList}/>
+    {/* <Additem checkpout={cartItemsList}/> */}
 	</div>);
  }
 }

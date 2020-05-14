@@ -6,11 +6,11 @@ import CartItems from './CartItems';
  
 function shopingcart(prop) {
    
-let List = prop.Itemlist
-    console.log("shopping",List)
+let list = prop.Itemlist
+    
 return  <div>
   <CartHeader/>
-  <CartItems items={List}/>
+  <CartItems items={list}/>
   <CartFooter copyright="2016"/>
 </div>
 }
