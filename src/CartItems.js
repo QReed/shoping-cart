@@ -1,11 +1,12 @@
 import React from 'react';
 import CartItemCOM from './CartItemCom';
 
-function CartItems(prop){
+class CartItems extends React.Component{
+    render() { 
 
-    let itemList= prop.items;
-
-return <div className="container">
+        let ItemList= this.props.Itemlist;        
+        return (
+        <div className="container">
             <h1>Cart Items</h1>
             <div className= "list-group">
                 <div className="list-group-item">
@@ -15,8 +16,10 @@ return <div className="container">
                         <div className="col-md-2">Quantity</div>
                     </div> 
                 </div >
-                <CartItemCOM itemsLS={itemList}/>
+                <CartItemCOM ItemsLS={ItemList}/>
             </div>
-        </div>
+        </div>);
+
+    }
 }
 export default CartItems;

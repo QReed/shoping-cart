@@ -1,29 +1,32 @@
 import React from 'react';
 
-function CartItemCOM(prop) {
+class CartItemCOM extends React.Component{
+  
+  render(){
+    var cartItemsList = this.props.ItemsLS;
+    const productList = cartItemsList.map((cartitem, index) =>
+       <ul key={index}>
+        <div className="row">
+           <div className="col-md-8"  >
+                {cartitem.product.name}
+            </div>
+            <div className="col-md-2" >
+              {cartitem.product.priceInCents}
+            </div>
+            <div className="col-md-2" >
+              {cartitem.quantity}       
+           </div>
+        </div>
+       </ul>
+    );
 
-  var cartItemsList = prop.itemsLS;
-  
-  const productList = cartItemsList.map((cartitem, index) =>
-  <tr key={index} >
-    <td>
-      {cartitem.product.name}
-    </td>
-    <td>
-      {"$" + cartitem.product.priceInCents*.01}
-    </td>
-    <td>
-      {cartitem.quantity}
-    </td>
-  </tr>);
-  
-  return ( 
-    <table >
-        <tbody>
-          {productList}
-        </tbody>
-    </table>
-  )
+    return ( 
+        <div className="collection-item">
+            {productList}
+        </div>
+        
+    );
+
+  }
 }
-
 export default CartItemCOM;
