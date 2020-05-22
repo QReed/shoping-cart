@@ -4,10 +4,13 @@ class AddItem extends React.Component{
 
     render(){
         const prodlist = this.props.items;// array of products sent from app.js
-//        console.log("prodlist", prodlist);
+        const cartitems= this.props.cartitems;
+        console.log("cart", {cartitems});
+        //console.log("prodlist", prodlist);
         //maps out every item within the passed in array in an option tag.
         const Itemlist = prodlist.map((item, index) =>
-            <option key={index}  value={item.name} price={item.priceInCents/100}>{item.name}</option>);              
+            <option key={index}  value={item.name} price={item.priceInCents/100}>{item.name}</option>); 
+                         
     
         return (
             <div className="container">
@@ -21,7 +24,7 @@ class AddItem extends React.Component{
                         {Itemlist}
                     </select>
                     <br/>
-                <input type="submit"/>
+                <button> Select </button>
                 </form>  
                         
             </div>
