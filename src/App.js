@@ -1,5 +1,5 @@
 import React from 'react';
-import Additem from './Additem';
+import AddItem from './AddItem';
 import CartFooter from './Footer';
 import CartItems from './CartItems';
 
@@ -17,33 +17,32 @@ class App extends React.Component {
         { id: 46, name: 'Intelligent Leather Clock', priceInCents: 2999 },
         { id: 47, name: 'Ergonomic Bronze Lamp', priceInCents: 40000 },
         { id: 48, name: 'Awesome Leather Shoes', priceInCents: 3990 },
-      ]
-    }
+    ]
+  }
 
-    
-    
+  render(){
 
- render(){   
+            function CartHeader(){
+                    return <nav className="navbar navbar-dark bg-primary">
+                    <a className="navbar-brand" href="#">Shoping Cart</a>
+                     </nav>;
+            }
 
-  function CartHeader(){
-    return <nav className="navbar navbar-dark bg-primary">
-        <a className="navbar-brand" href="#">Shoping Cart</a>
-    </nav>;
-}
+            var cartItemsList = [
+                { id: 1, product: { id: 40, name: 'Mediocre Iron Watch', priceInCents: 399 }, quantity: 1 },
+                { id: 2, product: { id: 41, name: 'Heavy Duty Concrete Plate', priceInCents: 499 }, quantity: 2 },
+                { id: 3, product: { id: 42, name: 'Intelligent Paper Knife', priceInCents: 1999 }, quantity: 1 },
+            ];
 
-    var cartItemsList = [
-        { id: 1, product: { id: 40, name: 'Mediocre Iron Watch', priceInCents: 399 }, quantity: 1 },
-        { id: 2, product: { id: 41, name: 'Heavy Duty Concrete Plate', priceInCents: 499 }, quantity: 2 },
-        { id: 3, product: { id: 42, name: 'Intelligent Paper Knife', priceInCents: 1999 }, quantity: 1 },
-      ];
- return (      
-    <div>
-    <CartHeader/>
-    <CartItems Itemlist={cartItemsList}/>
-    <Additem items={this.state.products} />
-    <CartFooter copyright="2016"/>
-	</div>);
- }
+            return (
+                    <div>
+                        <CartHeader/>
+                        <CartItems Itemlist={cartItemsList}/>
+                        <Additem items={this.state.products} />
+                        <CartFooter copyright="2016"/>
+                    </div>
+            );
+  }
 }
 export default App;
 

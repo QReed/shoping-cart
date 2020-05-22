@@ -1,6 +1,6 @@
 import React from 'react'
 
-class Additem extends React.Component{
+class AddItem extends React.Component{
 
     render(){
         var prodlist = this.props.items;
@@ -27,4 +27,4 @@ class Additem extends React.Component{
         );
     }
 }
-export default Additem;
+export default AddItem;
